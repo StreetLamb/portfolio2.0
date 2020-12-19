@@ -1,34 +1,20 @@
 import Head from "next/head";
 import styled from "styled-components";
 import Image from "next/image";
+import Link from "next/Link";
 import BigCard from "../components/BigCard";
 import CategoryCard from "../components/CategoryCard";
-
-const StyledNavBar = styled.ul`
-  list-style-type: none;
-  margin: 0;
-  padding: 5rem 2rem 3rem 2rem;
-  display: flex;
-`;
-
-const NameLogo = styled.li`
-  margin-right: auto;
-  font-size: 2rem;
-`;
-
-const StyledNavButton = styled.li`
-  padding: 0 0.5rem;
-  font-size: 1.5rem;
-
-  &:hover {
-    text-decoration: underline;
-  }
-`;
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 const HeroBox = styled.div`
   height: 38rem;
   display: flex;
   justify-content: center;
+
+  @media only screen and (max-width: 980px) {
+    flex-direction: column;
+  }
 `;
 
 const IntroBox = styled.div`
@@ -36,12 +22,14 @@ const IntroBox = styled.div`
   align-items: center;
   justify-content: center;
   flex: 1;
+  padding: 1rem;
 `;
 
-const IntroText = styled.p`
+const IntroText = styled.span`
   font-size: 1.5rem;
   text-align: left;
   width: 30rem;
+  color: #465a69;
 `;
 
 const StyledImage = styled(Image)`
@@ -53,30 +41,49 @@ const ImageBox = styled.div`
   display: flex;
   flex: 1;
   transform: translateY(3rem);
+
+  @media only screen and (max-width: 980px) {
+    flex: 2;
+  }
 `;
 
 const ContentBox = styled.div`
   display: flex;
   flex-direction: column;
-  min-height: 50rem;
-  padding: 8rem 1rem 1rem 2rem;
+  justify-content: center;
+  min-height: 40rem;
+  padding: 8rem 1rem 4rem 2rem;
   background: ${(props) => props.bgcolor};
+
+  @media only screen and (max-width: 980px) {
+    padding: 8rem 1rem;
+  }
 `;
 
 const ContentTitle = styled.span`
   font-size: 3rem;
+  color: #465a69;
 `;
 
 const CategoryBox = styled.div`
   display: flex;
   align-self: center;
+  @media only screen and (max-width: 980px) {
+    flex-direction: column;
+    width: 100%;
+  }
 `;
 
-const Footer = styled.footer`
-  display: flex;
-  border-top: 1px solid #eff2f2;
+const SeeMoreText = styled.span`
+  align-self: flex-end;
   padding: 1rem;
-  justify-content: center;
+  font-size: 1.5rem;
+  color: #465a69;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
 `;
 
 export default function Home() {
@@ -85,17 +92,17 @@ export default function Home() {
       <Head>
         <title>Jerron's Portfolio</title>
         <link rel="icon" href="/favicon.ico" />
+        <script
+          type="module"
+          src="https://unpkg.com/ionicons@5.2.3/dist/ionicons/ionicons.esm.js"
+        ></script>
+        <script
+          nomodule=""
+          src="https://unpkg.com/ionicons@5.2.3/dist/ionicons/ionicons.js"
+        ></script>
       </Head>
       <main>
-        <StyledNavBar>
-          <NameLogo>Jerron Lim</NameLogo>
-          <StyledNavButton>
-            <span>Resume</span>
-          </StyledNavButton>
-          <StyledNavButton>
-            <span>Projects</span>
-          </StyledNavButton>
-        </StyledNavBar>
+        <Navbar />
         <HeroBox>
           <IntroBox>
             <IntroText>
@@ -158,14 +165,11 @@ export default function Home() {
             bgcolor="#5c1e62"
             animate="true"
           />
-          <span style={{ alignSelf: "flex-end", padding: "1rem" }}>
-            See more projects &rarr;
-          </span>
+          <Link href="/projects/all">
+            <SeeMoreText>See more projects &rarr;</SeeMoreText>
+          </Link>
         </ContentBox>
-        <Footer>
-          <span>Linkedin</span>
-          <span>Email</span>
-        </Footer>
+        <Footer />
       </main>
     </div>
   );

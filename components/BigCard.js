@@ -23,6 +23,11 @@ const Card = styled.div`
       transform: scale(1.2);
     }
   `}
+
+  @media only screen and (max-width: 980px) {
+    flex-direction: column;
+    width: 100%;
+  }
 `;
 
 const TextContainer = styled.div`
@@ -31,13 +36,13 @@ const TextContainer = styled.div`
   flex-direction: column;
   padding: 1rem;
   background: ${(props) => props.bgcolor || "#f1f4f7"};
-  color: ${(props) => (props.bgcolor ? "white" : "black")};
+  color: ${(props) => (props.bgcolor ? "white" : "#465a69")};
 
   ${(props) =>
     props.animate == "true" &&
     css`
       background: #f1f4f7;
-      color: black;
+      color: #465a69;
       transition: background 0.2s, color 0.2s;
     `}
 `;
