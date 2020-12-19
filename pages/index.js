@@ -6,6 +6,7 @@ import BigCard from "../components/BigCard";
 import CategoryCard from "../components/CategoryCard";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import { getAllPosts } from "../lib/api";
 
 const HeroBox = styled.div`
   height: 38rem;
@@ -86,7 +87,9 @@ const SeeMoreText = styled.span`
   }
 `;
 
-export default function Home() {
+export default function Home({ allPosts }) {
+  const featuredPosts = allPosts.filter((post) => post.featured === "True");
+
   return (
     <div>
       <Head>
@@ -123,12 +126,18 @@ export default function Home() {
         </HeroBox>
         <ContentBox bgcolor="#f1f4f7">
           <ContentTitle>Noteworthy projects</ContentTitle>
-          <BigCard
-            image="/images/project.webp"
-            title="This is the title of a cool project"
-            bgcolor="#fac"
-            animate="false"
-          />
+          {featuredPosts
+            ? featuredPosts.map((post, index) => (
+                <BigCard
+                  key={index}
+                  image="/images/project.webp"
+                  title={post.title}
+                  slug={post.slug}
+                  bgcolor="#fac"
+                  animate="false"
+                />
+              ))
+            : null}
         </ContentBox>
         <ContentBox>
           <ContentTitle>Projects by categories</ContentTitle>
@@ -147,24 +156,20 @@ export default function Home() {
         </ContentBox>
         <ContentBox>
           <ContentTitle>Recent projects</ContentTitle>
-          <BigCard
-            image="/images/project.webp"
-            title="This is the title of a cool project"
-            bgcolor="#1d9696"
-            animate="true"
-          />
-          <BigCard
-            image="/images/project.webp"
-            title="This is the title of a cool project"
-            bgcolor="#d3770a"
-            animate="true"
-          />
-          <BigCard
-            image="/images/project.webp"
-            title="This is the title of a cool project"
-            bgcolor="#5c1e62"
-            animate="true"
-          />
+          {allPosts
+            ? allPosts
+                .slice(0, 3)
+                .map((post, index) => (
+                  <BigCard
+                    key={index}
+                    image="/images/project.webp"
+                    title={post.title}
+                    slug={post.slug}
+                    bgcolor={["#1d9696", "#d3770a", "#5c1e62"][index % 3]}
+                    animate="true"
+                  />
+                ))
+            : null}
           <Link href="/projects/all">
             <SeeMoreText>See more projects &rarr;</SeeMoreText>
           </Link>
@@ -173,4 +178,11 @@ export default function Home() {
       </main>
     </div>
   );
+}
+
+export async function getStaticProps() {
+  const allPosts = getAllPosts(["title", "excerpt", "featured", "slug"]);
+  return {
+    props: { allPosts },
+  };
 }

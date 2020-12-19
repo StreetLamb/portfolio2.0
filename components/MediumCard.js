@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Image from "next/image";
+import Link from "next/Link";
 
 const ImageBox = styled.div`
   display: flex;
@@ -25,10 +26,10 @@ const TextContainer = styled.div`
   transition: background 0.2s, color 0.2s;
 `;
 
-const Card = styled.div`
+const Card = styled.a`
   display: flex;
   height: 30rem;
-  width: 20rem;
+  width: 30rem;
   margin: 1rem;
   border-radius: 0.5rem;
   flex-direction: column;
@@ -65,21 +66,23 @@ const HeaderBox = styled.div`
   flex-direction: column;
 `;
 
-const MediumCard = (props) => {
+const MediumCard = ({ bgcolor, image, category, title, date, slug }) => {
   return (
-    <Card bgcolor={props.bgcolor}>
-      <ImageBox>
-        <StyledImage src={props.image} layout="fill" alt="img of project" />
-      </ImageBox>
-      <TextContainer bgcolor={props.bgcolor}>
-        <HeaderBox>
-          <SmallText>{props.category}</SmallText>
-          <MidText>{props.title}</MidText>
-        </HeaderBox>
+    <Link href={`/projects/${slug}`} passHref>
+      <Card bgcolor={bgcolor}>
+        <ImageBox>
+          <StyledImage src={image} layout="fill" alt="img of project" />
+        </ImageBox>
+        <TextContainer bgcolor={bgcolor}>
+          <HeaderBox>
+            <SmallText>{category}</SmallText>
+            <MidText>{title}</MidText>
+          </HeaderBox>
 
-        <SmallText>{props.date}</SmallText>
-      </TextContainer>
-    </Card>
+          <SmallText>{date}</SmallText>
+        </TextContainer>
+      </Card>
+    </Link>
   );
 };
 

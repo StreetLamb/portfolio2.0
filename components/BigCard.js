@@ -1,7 +1,8 @@
 import styled, { css } from "styled-components";
 import Image from "next/image";
+import Link from "next/Link";
 
-const Card = styled.div`
+const Card = styled.a`
   display: flex;
   height: 30rem;
   width: 60rem;
@@ -67,22 +68,24 @@ const StyledText = styled.p`
   font-weight: 600;
 `;
 
-const BigCard = (props) => {
+const BigCard = ({ animate, bgcolor, image, title, slug }) => {
   return (
-    <Card animate={props.animate} bgcolor={props.bgcolor}>
-      <ImageBox>
-        <StyledImage
-          animate={props.animate}
-          src={props.image}
-          layout="fill"
-          alt="img of noteworthy project"
-        />
-      </ImageBox>
+    <Link href={`/projects/${slug}`} passHref>
+      <Card animate={animate} bgcolor={bgcolor}>
+        <ImageBox>
+          <StyledImage
+            animate={animate}
+            src={image}
+            layout="fill"
+            alt="img of noteworthy project"
+          />
+        </ImageBox>
 
-      <TextContainer bgcolor={props.bgcolor} animate={props.animate}>
-        <StyledText>{props.title}</StyledText>
-      </TextContainer>
-    </Card>
+        <TextContainer bgcolor={bgcolor} animate={animate}>
+          <StyledText>{title}</StyledText>
+        </TextContainer>
+      </Card>
+    </Link>
   );
 };
 

@@ -2,6 +2,7 @@ import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import styled from "styled-components";
 import MediumCard from "../../components/MediumCard";
+import { getAllPosts } from "../../lib/api";
 
 const CategoryNav = styled.ul`
   display: flex;
@@ -16,6 +17,10 @@ const CatBigText = styled.span`
   margin-left: 10rem;
   font-weight: 600;
   font-size: 1.5rem;
+
+  @media only screen and (max-width: 980px) {
+    margin: auto;
+
 `;
 
 const CatNav = styled.li`
@@ -58,7 +63,7 @@ const CardContainer = styled.div`
   justify-content: center;
 `;
 
-const AllProjects = () => {
+const AllProjects = ({ allPosts }) => {
   return (
     <div>
       <Navbar />
@@ -78,63 +83,32 @@ const AllProjects = () => {
         <CatNav>
           <ion-icon size="large" name="chevron-down-outline"></ion-icon>
         </CatNav>
-        {/* <CatBigText>BROWSE PROJECTS BY</CatBigText>
-        <CatSmallTextBox>
-          <CatSmallText>Web dev</CatSmallText>
-          <CatSmallText>ML</CatSmallText>
-          <CatSmallText>Engineering</CatSmallText>
-          <CatSmallText>
-            <ion-icon name="chevron-down-outline"></ion-icon>
-          </CatSmallText>
-        </CatSmallTextBox> */}
       </CategoryNav>
       <CardContainer>
-        <MediumCard
-          image="/images/project.webp"
-          bgcolor="#1d9696"
-          category="Web dev"
-          title="Pretty cool project"
-          date="Dec 2020"
-        />
-        <MediumCard
-          image="/images/project.webp"
-          bgcolor="#1d9696"
-          category="Web dev"
-          title="Pretty cool project"
-          date="Dec 2020"
-        />
-        <MediumCard
-          image="/images/project.webp"
-          bgcolor="#1d9696"
-          category="Web dev"
-          title="Pretty cool project"
-          date="Dec 2020"
-        />
-        <MediumCard
-          image="/images/project.webp"
-          bgcolor="#1d9696"
-          category="Web dev"
-          title="Pretty cool project"
-          date="Dec 2020"
-        />
-        <MediumCard
-          image="/images/project.webp"
-          bgcolor="#1d9696"
-          category="Web dev"
-          title="Pretty cool project"
-          date="Dec 2020"
-        />
-        <MediumCard
-          image="/images/project.webp"
-          bgcolor="#1d9696"
-          category="Web dev"
-          title="Pretty cool project"
-          date="Dec 2020"
-        />
+        {allPosts
+          ? allPosts.map((post, index) => (
+              <MediumCard
+                key={index}
+                image="/images/project.webp"
+                bgcolor={["#1d9696", "#d3770a", "#5c1e62"][index % 3]}
+                category={post.category}
+                title={post.title}
+                date={post.date}
+                slug={post.slug}
+              />
+            ))
+          : null}
       </CardContainer>
       <Footer />
     </div>
   );
 };
+
+export async function getStaticProps() {
+  const allPosts = getAllPosts(["title", "category", "date", "slug"]);
+  return {
+    props: { allPosts },
+  };
+}
 
 export default AllProjects;
