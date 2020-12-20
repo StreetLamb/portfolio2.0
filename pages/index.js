@@ -129,8 +129,8 @@ export default function Home({ allPosts }) {
               Intelligent Transport Systems Development division.
               <br />
               <br />
-              This site keeps track of personal projects that I have worked on
-              and my thoughts after finishing them.
+              This site keeps track of my personal projects and my thoughts
+              after working on them.
             </IntroText>
           </IntroBox>
           <ImageBox>

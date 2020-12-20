@@ -32,7 +32,7 @@ const Navigation = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  transition: transform 0.2s, visibility 0.2s;
+  transition: transform 0.5s, visibility 0.5s;
 
   ${(props) =>
     !props.isEnabled
@@ -107,24 +107,22 @@ const Navbar = () => {
             position: "absolute",
             right: "0",
             top: "0",
-            margin: "2rem",
-            padding: "1rem",
+            margin: ".5rem",
+            padding: "0 .5rem",
             color: "white",
           }}
           name="close-outline"
         ></ion-icon>
-        <FullNavButton>
-          <Link onClick={() => setOpenMenu(false)} href="/">
-            Home
-          </Link>
+        <FullNavButton onClick={() => setOpenMenu(false)}>
+          <Link href="/">Home</Link>
         </FullNavButton>
-        <FullNavButton>
-          <Link onClick={() => setOpenMenu(false)} href="/resume">
+        <FullNavButton onClick={() => setOpenMenu(false)}>
+          <Link href="/resume">
             <a>Resume</a>
           </Link>
         </FullNavButton>
-        <FullNavButton>
-          <Link onClick={() => setOpenMenu(false)} href="/projects/all">
+        <FullNavButton onClick={() => setOpenMenu(false)}>
+          <Link href="/projects/all">
             <a>Projects</a>
           </Link>
         </FullNavButton>
