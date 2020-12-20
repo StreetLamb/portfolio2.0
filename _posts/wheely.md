@@ -6,7 +6,7 @@ date: "Dec 2019"
 author:
   name: Jerron Lim
 category: "Engineering"
-featured: "False"
+featured: "True"
 ---
 
 We partnered with the Ester team in Singapore General Hospital (SGH) to develop a wheelchair that could provide wheelchair users with more freedom.
@@ -17,4 +17,4 @@ They explained to us that a significant number of elderlies do not turn up for t
 
 After multiple iterations and interviews with patients, caregivers, and our stakeholders, we designed a wheelchair add-on that would be able to protect users, caregivers from both the rain and the sun. Our innovative design also allows the wheelchair and the shelter add-on to be easily stowed away.
 
-It was a fulfilling project and the Ester team was very impressed with our work! They even treated us to dinner! We have filed a provisional patent and are currently in discussion for SGH to adopt the design in their hospitals.
+It was a fulfilling project and the Ester team was very impressed with our work! They even treated us to dinner! We are currently in discussion for SGH to adopt the design in their hospitals.

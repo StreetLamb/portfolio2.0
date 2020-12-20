@@ -47,7 +47,7 @@ const Navigation = styled.div`
 
 const FullNavButton = styled.span`
   color: white;
-  font-size: 5rem;
+  font-size: 3rem;
   padding-bottom: 2rem;
   cursor: pointer;
 `;
@@ -98,19 +98,21 @@ const Navbar = () => {
         </StyledNavButton>
       </StyledNavBar>
       <Navigation isEnabled={openMenu}>
-        <ion-icon
-          onClick={() => setOpenMenu(false)}
-          style={{
-            fontSize: "5rem",
-            position: "absolute",
-            right: "0",
-            top: "0",
-            margin: ".5rem",
-            padding: "0 .5rem",
-            color: "white",
-          }}
-          name="close-outline"
-        ></ion-icon>
+        <a onClick={() => setOpenMenu(false)}>
+          <ion-icon
+            style={{
+              fontSize: "4rem",
+              position: "absolute",
+              right: "0",
+              top: "0",
+              margin: ".5rem",
+              padding: "0 .5rem",
+              color: "white",
+            }}
+            name="close-outline"
+          ></ion-icon>
+        </a>
+
         <FullNavButton onClick={() => setOpenMenu(false)}>
           <Link href="/">Home</Link>
         </FullNavButton>

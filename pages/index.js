@@ -7,6 +7,14 @@ import CategoryCard from "../components/CategoryCard";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { getAllPosts } from "../lib/api";
+import {
+  CarouselProvider,
+  Slider,
+  Slide,
+  DotGroup,
+  Dot,
+} from "pure-react-carousel";
+import "pure-react-carousel/dist/react-carousel.es.css";
 
 const HeroBox = styled.div`
   height: 38rem;
@@ -97,6 +105,30 @@ const SeeMoreText = styled.span`
   }
 `;
 
+const InnerSlide = styled.div`
+  display: flex;
+  justify-content: center;
+`;
+
+const StyledDotGroup = styled(DotGroup)`
+  display: flex;
+  justify-content: center;
+`;
+
+const StyledDot = styled(Dot)`
+  height: 0.8rem;
+  width: 0.8rem;
+  border-radius: 100%;
+  margin-right: 0.5rem;
+  background: #6d6d6da3;
+  opacity: 0.7;
+  border: none;
+
+  &:disabled {
+    background: black;
+  }
+`;
+
 const categories = {
   "Software dev": "Software projects consisting of web dev, app dev and bots.",
   Engineering: "Hardware and mechanical design projects.",
@@ -135,27 +167,72 @@ export default function Home({ allPosts }) {
           </IntroBox>
           <ImageBox>
             <StyledImage
-              src="/images/big-sur.jpg"
-              alt="image of big sur"
+              src="/images/jerron.jpeg"
+              alt="profile picture"
               layout="fill"
             />
           </ImageBox>
         </HeroBox>
         <ContentBox bgcolor="#f1f4f7">
           <ContentTitle>Noteworthy projects</ContentTitle>
-          {featuredPosts
-            ? featuredPosts.map((post, index) => (
-                <BigCard
-                  key={index}
-                  image={post.coverImage || "/images/project.webp"}
-                  title={post.title}
-                  date={post.date}
-                  slug={post.slug}
-                  bgcolor="#1d6e96"
-                  animate="false"
-                />
-              ))
-            : null}
+          <div>
+            <CarouselProvider
+              naturalSlideWidth={960}
+              isIntrinsicHeight
+              totalSlides={featuredPosts.length}
+            >
+              <Slider>
+                {featuredPosts
+                  ? featuredPosts.map((post, index) => (
+                      <Slide
+                        index={index}
+                        style={{ display: "flex", justifyContent: "center" }}
+                        innerTag={InnerSlide}
+                      >
+                        <BigCard
+                          className="legend"
+                          key={index}
+                          image={post.coverImage || "/images/project.webp"}
+                          title={post.title}
+                          date={post.date}
+                          slug={post.slug}
+                          bgcolor={["#1d6e96", "#d3770a", "#5c1e62"][index % 3]}
+                          animate="false"
+                        />
+                      </Slide>
+                    ))
+                  : null}
+              </Slider>
+              <StyledDotGroup
+                renderDots={() => (
+                  <div>
+                    {featuredPosts.map((post, index) => (
+                      <StyledDot slide={index} />
+                    ))}
+                  </div>
+                )}
+              />
+            </CarouselProvider>
+          </div>
+
+          {/* <StyledCarousel>
+            {featuredPosts
+              ? featuredPosts.map((post, index) => (
+                  <div>
+                    <BigCard
+                      className="legend"
+                      key={index}
+                      image={post.coverImage || "/images/project.webp"}
+                      title={post.title}
+                      date={post.date}
+                      slug={post.slug}
+                      bgcolor="#1d6e96"
+                      animate="false"
+                    />
+                  </div>
+                ))
+              : null}
+          </StyledCarousel> */}
         </ContentBox>
         <ContentBox>
           <ContentTitle>Projects by categories</ContentTitle>

@@ -6,7 +6,7 @@ date: "March 2020"
 author:
   name: Jerron Lim
 category: "Software dev"
-featured: "False"
+featured: "True"
 ---
 
 > _“I've lived next to the same family for 12 years, and while we do say hi from time to time, I don't know much about them - not even their names” - Celine Chan, 23_
