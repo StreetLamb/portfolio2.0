@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 import Image from "next/image";
-import Link from "next/Link";
+import Link from "next/link";
 
 const Card = styled.a`
   display: flex;

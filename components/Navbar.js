@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { useState } from "react";
-import Link from "next/Link";
+import Link from "next/link";
 
 const StyledNavBar = styled.ul`
   list-style-type: none;

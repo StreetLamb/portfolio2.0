@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import Image from "next/image";
-import Link from "next/Link";
+import Link from "next/link";
 
 const ImageBox = styled.div`
   display: flex;

@@ -1,7 +1,7 @@
 import Head from "next/head";
 import styled from "styled-components";
 import Image from "next/image";
-import Link from "next/Link";
+import Link from "next/link";
 import BigCard from "../components/BigCard";
 import CategoryCard from "../components/CategoryCard";
 import Navbar from "../components/Navbar";
@@ -185,13 +185,13 @@ export default function Home({ allPosts }) {
                 {featuredPosts
                   ? featuredPosts.map((post, index) => (
                       <Slide
+                        key={index}
                         index={index}
                         style={{ display: "flex", justifyContent: "center" }}
                         innerTag={InnerSlide}
                       >
                         <BigCard
                           className="legend"
-                          key={index}
                           image={post.coverImage || "/images/project.webp"}
                           title={post.title}
                           date={post.date}
@@ -207,7 +207,7 @@ export default function Home({ allPosts }) {
                 renderDots={() => (
                   <div>
                     {featuredPosts.map((post, index) => (
-                      <StyledDot slide={index} />
+                      <StyledDot key={index} slide={index} />
                     ))}
                   </div>
                 )}
