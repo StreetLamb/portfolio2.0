@@ -70,13 +70,14 @@ const ImageBox = styled.div`
 const StyledText = styled.p`
   font-size: 2rem;
   font-weight: 600;
+  margin-bottom: auto;
 
   @media only screen and (max-width: 480px) {
     font-size: 1rem;
   }
 `;
 
-const BigCard = ({ animate, bgcolor, image, title, slug }) => {
+const BigCard = ({ animate, bgcolor, image, title, slug, date }) => {
   return (
     <Link href={`/projects/${slug}`} passHref>
       <Card animate={animate} bgcolor={bgcolor}>
@@ -91,6 +92,7 @@ const BigCard = ({ animate, bgcolor, image, title, slug }) => {
 
         <TextContainer bgcolor={bgcolor} animate={animate}>
           <StyledText>{title}</StyledText>
+          <span>{date}</span>
         </TextContainer>
       </Card>
     </Link>

@@ -31,6 +31,7 @@ const IntroText = styled.span`
   text-align: left;
   width: 30rem;
   color: #465a69;
+  line-height: 2.5rem;
 
   @media only screen and (max-width: 480px) {
     font-size: 1rem;
@@ -96,6 +97,12 @@ const SeeMoreText = styled.span`
   }
 `;
 
+const categories = {
+  "Software dev": "Software projects consisting of web dev, app dev and bots.",
+  Engineering: "Hardware and mechanical design projects.",
+  ML: "Data exploration using ML and deep learning models.",
+};
+
 export default function Home({ allPosts }) {
   const featuredPosts = allPosts.filter((post) => post.featured === "True");
 
@@ -118,11 +125,12 @@ export default function Home({ allPosts }) {
         <HeroBox>
           <IntroBox>
             <IntroText>
-              Hi, my name is Jerron. I am an engineer working in LTA.
+              Hi, my name is Jerron. I am currently an engineer in LTA's
+              Intelligent Transport Systems Development division.
               <br />
               <br />
-              During my spare time, I like to work on personal software projects
-              and experiment with ML models.
+              This site keeps track of personal projects that I have worked on
+              and my thoughts after finishing them.
             </IntroText>
           </IntroBox>
           <ImageBox>
@@ -141,6 +149,7 @@ export default function Home({ allPosts }) {
                   key={index}
                   image={post.coverImage || "/images/project.webp"}
                   title={post.title}
+                  date={post.date}
                   slug={post.slug}
                   bgcolor="#fac"
                   animate="false"
@@ -151,7 +160,14 @@ export default function Home({ allPosts }) {
         <ContentBox>
           <ContentTitle>Projects by categories</ContentTitle>
           <CategoryBox>
-            <CategoryCard title="Web development" desc="Building web apps." />
+            {Object.keys(categories).map((category, index) => (
+              <CategoryCard
+                title={category}
+                desc={categories[category]}
+                key={index}
+              />
+            ))}
+            {/* <CategoryCard title="Web development" desc="Building web apps." />
             <CategoryCard
               title="Machine Learning"
               desc="Experimenting with ML models"
@@ -160,7 +176,7 @@ export default function Home({ allPosts }) {
               title="Mechanical Engineering"
               desc="Hardware projects"
             />
-            <CategoryCard title="Bots" desc="Building bots on Telegram" />
+            <CategoryCard title="Bots" desc="Building bots on Telegram" /> */}
           </CategoryBox>
         </ContentBox>
         <ContentBox>
@@ -174,6 +190,7 @@ export default function Home({ allPosts }) {
                     key={index}
                     image={post.coverImage || "/images/project.webp"}
                     title={post.title}
+                    date={post.date}
                     slug={post.slug}
                     bgcolor={["#1d9696", "#d3770a", "#5c1e62"][index % 3]}
                     animate="true"
@@ -197,6 +214,7 @@ export async function getStaticProps() {
     "featured",
     "slug",
     "coverImage",
+    "date",
   ]);
   return {
     props: { allPosts },

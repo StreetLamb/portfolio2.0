@@ -5,18 +5,21 @@ import MediumCard from "../../components/MediumCard";
 import { getAllPosts } from "../../lib/api";
 import { useState } from "react";
 
-const CategoryNav = styled.ul`
+const CategoryNav = styled.div`
+  display: flex;
+  flex-direction: column;
+  background: #f1f4f7;
+`;
+
+const CategoryList = styled.ul`
   display: flex;
   height: 15vh;
   background: #f1f4f7;
-  padding: 2rem;
   align-items: center;
   list-style-type: none;
 
-  @media only screen and (max-width: 480px) {
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
+  @media only screen and (max-width: 980px) {
+    padding: 1rem;
     height: auto;
   }
 `;
@@ -59,12 +62,40 @@ const CatNav = styled.li`
   @media only screen and (max-width: 528px) {
     font-size: 1rem;
   }
+  }
+`;
+
+const DropdownNav = styled.div`
+  dsplay: flex;
+  flex-direction: column;
+  padding: 0 2rem 1rem 2rem;
+  animation: dropdown 0.5s;
+
+  @keyframes dropdown {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity 1;
+    }
+  }
+`;
+
+const DropdownNavItem = styled.div`
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #465a69;
+  transition: background 0.2s, color 0.2s;
+
+  &:active {
+    background: #344f63;
+    color: white;
+  }
 
   @media only screen and (max-width: 480px) {
-    &:first-child {
-      margin-right: inherit;
-      padding: 1rem 0;
-    }
+    justify-items: center;
   }
 `;
 
@@ -95,23 +126,43 @@ const categories = ["Software dev", "Engineering", "ML", "All"];
 
 const AllProjects = ({ allPosts }) => {
   const [cat, setCat] = useState("All");
+  const [catNav, setCatNav] = useState(false);
 
   return (
     <div>
       <Navbar />
-      <CategoryNav>
-        <CatNav>
-          <CatBigText>BROWSE PROJECTS BY</CatBigText>
-        </CatNav>
-        {categories.map((category, index) => (
-          <CatNav key={index} onClick={() => setCat(category)}>
-            <CatSmallText selected={category === cat}>{category}</CatSmallText>
+      <CategoryNav style={{ background: "#f1f4f7" }}>
+        <CategoryList>
+          <CatNav>
+            <CatBigText>BROWSE PROJECTS BY</CatBigText>
           </CatNav>
-        ))}
-        <CatNav>
-          <CatSmallText>{cat}</CatSmallText>
-          <ion-icon size="large" name="chevron-down-outline"></ion-icon>
-        </CatNav>
+          {categories.map((category, index) => (
+            <CatNav key={index} onClick={() => setCat(category)}>
+              <CatSmallText selected={category === cat}>
+                {category}
+              </CatSmallText>
+            </CatNav>
+          ))}
+          <CatNav onClick={() => setCatNav(!catNav)}>
+            <CatSmallText>{cat}</CatSmallText>
+            <ion-icon size="large" name="chevron-down-outline"></ion-icon>
+          </CatNav>
+        </CategoryList>
+        {catNav ? (
+          <DropdownNav>
+            {categories.map((category, index) => (
+              <DropdownNavItem
+                key={index}
+                onClick={() => {
+                  setCat(category);
+                  setCatNav(false);
+                }}
+              >
+                <span>{category}</span>
+              </DropdownNavItem>
+            ))}
+          </DropdownNav>
+        ) : null}
       </CategoryNav>
       <CardContainer>
         {allPosts
