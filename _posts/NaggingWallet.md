@@ -5,8 +5,6 @@ coverImage: "/images/nagging-wallet/naggingwallet.png"
 date: "April 2020"
 author:
   name: Jerron Lim
-ogImage:
-  url: "/images/nagging-wallet /naggingwallet.png"
 category: "Software dev"
 featured: "False"
 ---

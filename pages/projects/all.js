@@ -3,7 +3,8 @@ import Footer from "../../components/Footer";
 import styled from "styled-components";
 import MediumCard from "../../components/MediumCard";
 import { getAllPosts } from "../../lib/api";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useRouter } from "next/router";
 
 const CategoryNav = styled.div`
   display: flex;
@@ -125,8 +126,13 @@ const CardContainer = styled.div`
 const categories = ["Software dev", "Engineering", "ML", "All"];
 
 const AllProjects = ({ allPosts }) => {
-  const [cat, setCat] = useState("All");
+  const router = useRouter();
+  const [cat, setCat] = useState(router.query.cat || "All");
   const [catNav, setCatNav] = useState(false);
+
+  useEffect(() => {
+    router.push(`/projects/all?cat=${cat}`, undefined, { shallow: true });
+  }, [cat]);
 
   return (
     <div>

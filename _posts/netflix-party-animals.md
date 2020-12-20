@@ -5,8 +5,6 @@ coverImage: "/images/netflix-party-animals/netflixpartyanimals.jpeg"
 date: "April 2020"
 author:
   name: Jerron Lim
-ogImage:
-  url: "/images/netflix-party-animals/netflixpartyanimals.jpeg"
 category: "Software dev"
 featured: "False"
 ---

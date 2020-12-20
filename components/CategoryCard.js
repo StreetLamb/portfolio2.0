@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import Link from "next/Link";
 
-const CatCard = styled.div`
+const CatCard = styled.a`
   display: flex;
   flex-direction: column;
   max-width: 15rem;
@@ -36,12 +37,14 @@ const DescBox = styled.p`
   color: #465a69;
 `;
 
-const CategoryCard = (props) => {
+const CategoryCard = ({ title, desc }) => {
   return (
-    <CatCard>
-      <Title>{props.title}</Title>
-      <DescBox>{props.desc}</DescBox>
-    </CatCard>
+    <Link href={`/projects/all?cat=${title}`} passHref>
+      <CatCard>
+        <Title>{title}</Title>
+        <DescBox>{desc}</DescBox>
+      </CatCard>
+    </Link>
   );
 };
 

@@ -5,8 +5,6 @@ coverImage: "/images/ydna-bus-app/bustimings.png"
 date: "Dec 2020"
 author:
   name: Jerron Lim
-ogImage:
-  url: "/images/ydna-bus-app/bustimings.png"
 category: "Software dev"
 featured: "True"
 ---

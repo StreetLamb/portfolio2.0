@@ -5,8 +5,6 @@ coverImage: "/images/band8/band8.jpeg"
 date: "Jan 2020"
 author:
   name: Jerron Lim
-ogImage:
-  url: "/images/band8/band8.jpeg"
 category: "Engineering"
 featured: "False"
 ---

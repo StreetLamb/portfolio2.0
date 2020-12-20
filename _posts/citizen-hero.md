@@ -5,8 +5,6 @@ coverImage: "/images/citizen-hero/citizenhero.png"
 date: "March 2020"
 author:
   name: Jerron Lim
-ogImage:
-  url: "/images/citizen-hero/citizenhero.png"
 category: "Software dev"
 featured: "False"
 ---

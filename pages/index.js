@@ -151,7 +151,7 @@ export default function Home({ allPosts }) {
                   title={post.title}
                   date={post.date}
                   slug={post.slug}
-                  bgcolor="#fac"
+                  bgcolor="#1d6e96"
                   animate="false"
                 />
               ))
@@ -167,16 +167,6 @@ export default function Home({ allPosts }) {
                 key={index}
               />
             ))}
-            {/* <CategoryCard title="Web development" desc="Building web apps." />
-            <CategoryCard
-              title="Machine Learning"
-              desc="Experimenting with ML models"
-            />
-            <CategoryCard
-              title="Mechanical Engineering"
-              desc="Hardware projects"
-            />
-            <CategoryCard title="Bots" desc="Building bots on Telegram" /> */}
           </CategoryBox>
         </ContentBox>
         <ContentBox>
