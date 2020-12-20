@@ -8,7 +8,7 @@
 
 > - Support development of island-wide project to improve LTA's traffic analysis, management and real-time prediction capabilities.
 
-> - COnduct studies and build prototypes to validate ideas to enhance traffic data collection and visualisation.
+> - Conduct studies and build prototypes to validate ideas to enhance traffic data collection and visualisation.
 
 &nbsp;
 

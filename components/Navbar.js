@@ -75,8 +75,6 @@ const StyledNavButton = styled.li`
   }
 `;
 
-//TODO: NavScreen does not close if click on link twice.
-
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false);
   return (
