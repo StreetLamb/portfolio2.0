@@ -196,7 +196,7 @@ export default function Home({ allPosts }) {
                           title={post.title}
                           date={post.date}
                           slug={post.slug}
-                          bgcolor={["#1d6e96", "#d3770a", "#5c1e62"][index % 3]}
+                          bgcolor={["#2a9d8f", "#e76f51", "#f4a261"][index % 3]}
                           animate="false"
                         />
                       </Slide>
