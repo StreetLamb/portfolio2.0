@@ -1,17 +1,17 @@
 ---
 title: "Connect with people through movies and tv shows with NetflixPartyAnimals"
 excerpt: "Covid19 has forced us into our homes. How do we continue to create new relationships?"
-# coverImage: "/assets/blog/hello-world/cover.jpg"
+coverImage: "/images/netflix-party-animals/netflixpartyanimals.jpeg"
 date: "April 2020"
 author:
   name: Jerron Lim
 ogImage:
-  url: "/assets/blog/hello-world/cover.jpg"
-category: "software dev"
+  url: "/images/netflix-party-animals/netflixpartyanimals.jpeg"
+category: "Software dev"
 featured: "False"
 ---
 
-<p style="text-align:center"><iframe width="700" height="400" src="https://www.youtube.com/embed/_HOuLnuYf4Q" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+Watch a demo [here](https://www.youtube.com/embed/_HOuLnuYf4Q)!
 
 The quarantine has impacted everyone socially. Many Singaporeans adapted to the situation and are hanging with their friends on Zoom, HouseParty, and even watching tv shows using the NetflixParty extension!
 

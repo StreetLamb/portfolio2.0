@@ -7,7 +7,7 @@ author:
   name: Jerron Lim
 ogImage:
   url: "/images/ydna-bus-app/bustimings.png"
-category: "software dev"
+category: "Software dev"
 featured: "True"
 ---
 

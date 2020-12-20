@@ -14,6 +14,16 @@ const PostContainer = styled.div`
   padding: 2rem;
   margin: 0 auto;
   max-width: 60vw;
+
+  @media only screen and (max-width: 768px) {
+    max-width: 80vw;
+    padding: 1rem;
+  }
+
+  @media only screen and (max-width: 425px) {
+    width: 100%;
+    padding: 0.5rem;
+  }
 `;
 
 const Heading = styled.div`
@@ -23,8 +33,16 @@ const Heading = styled.div`
 `;
 
 const BigText = styled.span`
-  font-size: 5rem;
+  font-size: 4rem;
   color: #465a69;
+
+  @media only screen and (max-width: 980px) {
+    font-size: 3rem;
+  }
+
+  @media only screen and (max-width: 425px) {
+    font-size: 2rem;
+  }
 `;
 
 const DescText = styled.span`
@@ -32,8 +50,9 @@ const DescText = styled.span`
   font-weight: 300;
   font-size: 1.2rem;
   line-height: 2.5rem;
-  color: #465a69;
+  color: gray;
   padding-top: 0.5rem;
+  font-style: italic;
 `;
 
 const SmallText = styled.span`

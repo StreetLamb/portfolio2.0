@@ -29,6 +29,10 @@ const Card = styled.a`
     flex-direction: column;
     width: 100%;
   }
+
+  @media only screen and (max-width: 480px) {
+    height: 20rem;
+  }
 `;
 
 const TextContainer = styled.div`
@@ -66,6 +70,10 @@ const ImageBox = styled.div`
 const StyledText = styled.p`
   font-size: 2rem;
   font-weight: 600;
+
+  @media only screen and (max-width: 480px) {
+    font-size: 1rem;
+  }
 `;
 
 const BigCard = ({ animate, bgcolor, image, title, slug }) => {

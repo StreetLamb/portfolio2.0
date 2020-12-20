@@ -1,18 +1,28 @@
 ---
 title: "Reduce impulsive purchases through an inconveniently designed extension"
-excerpt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus."
-coverImage: "/assets/blog/hello-world/cover.jpg"
+excerpt: "Online shoppings becomes increasingly addictive with many sites offering discounts and attractive deals. It's time to control our addiction."
+coverImage: "/images/nagging-wallet/naggingwallet.png"
 date: "April 2020"
 author:
   name: Jerron Lim
 ogImage:
-  url: "/assets/blog/hello-world/cover.jpg"
-category: "software dev"
+  url: "/images/nagging-wallet /naggingwallet.png"
+category: "Software dev"
 featured: "False"
 ---
 
-The quarantine has impacted everyone socially. Many Singaporeans adapted to the situation and are hanging with their friends on Zoom, HouseParty, and even watching tv shows using the NetflixParty extension!
+_NaggingWallet is a solo project built on an idea that won us first place in Hack Mental Health hackathon @ UCSF in 2019. Read the medium article [here](https://medium.com/hackmentalhealth/compulsive-buying-disorder-winning-hackmentalhealth-2019-42db168d31c4)!_
 
-I decided instead of watching tv shows with just your friends, what if we could watch it with other Singaporeans that share the same common interest in shows? Therefore, I set my mind to create NetflixPartyAnimals bot on Telegram so that Singaporeans can organize Netflix parties and watch + laugh at our favorite shows together.
+Online shopping allows us to purchase items with greater ease, but this also means our money gets spent with greater ease too! I decided to create NaggingWallet, a chrome extension that persuades you to make better online shopping decisions through an inconvenient design. This means manipulating the site such as making the purchase button less attractive to click, removing ads, creating prompts that act as safety nets to ensure that you only purchase what you need, and many others! It also helps keep track of your online spendings.
 
-Through the NetflixPartyAnimals bot, anyone can set up a NetflixParty event and it will be broadcasted on the NetflixPartyAnimals channel. Anyone will be able to join the event and watch shows together!
+Here are some of the more prominent features:
+
+- Feel guilty about spending money before you purchase!
+
+- Create a budget that updates as you spend money. Your budget shows up as you shop online so you know your spending limits.
+
+- Remove clutter and distractions on pages that might make you spend more while you shop.
+
+Currently, NaggingWallet only works on Amazon, Shopee, and Lazada.
+
+Watch the demo [here](https://www.youtube.com/embed/lLvp5UUOrr4)!

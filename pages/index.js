@@ -31,6 +31,10 @@ const IntroText = styled.span`
   text-align: left;
   width: 30rem;
   color: #465a69;
+
+  @media only screen and (max-width: 480px) {
+    font-size: 1rem;
+  }
 `;
 
 const StyledImage = styled(Image)`
@@ -64,6 +68,11 @@ const ContentBox = styled.div`
 const ContentTitle = styled.span`
   font-size: 3rem;
   color: #465a69;
+
+  @media only screen and (max-width: 480px) {
+    font-size: 2rem;
+    overflow: hidden;
+  }
 `;
 
 const CategoryBox = styled.div`
@@ -130,7 +139,7 @@ export default function Home({ allPosts }) {
             ? featuredPosts.map((post, index) => (
                 <BigCard
                   key={index}
-                  image="/images/project.webp"
+                  image={post.coverImage || "/images/project.webp"}
                   title={post.title}
                   slug={post.slug}
                   bgcolor="#fac"
@@ -158,11 +167,12 @@ export default function Home({ allPosts }) {
           <ContentTitle>Recent projects</ContentTitle>
           {allPosts
             ? allPosts
+                .sort((a, b) => Date.parse(b.date) - Date.parse(a.date))
                 .slice(0, 3)
                 .map((post, index) => (
                   <BigCard
                     key={index}
-                    image="/images/project.webp"
+                    image={post.coverImage || "/images/project.webp"}
                     title={post.title}
                     slug={post.slug}
                     bgcolor={["#1d9696", "#d3770a", "#5c1e62"][index % 3]}
@@ -181,7 +191,13 @@ export default function Home({ allPosts }) {
 }
 
 export async function getStaticProps() {
-  const allPosts = getAllPosts(["title", "excerpt", "featured", "slug"]);
+  const allPosts = getAllPosts([
+    "title",
+    "excerpt",
+    "featured",
+    "slug",
+    "coverImage",
+  ]);
   return {
     props: { allPosts },
   };

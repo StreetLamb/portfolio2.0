@@ -14,6 +14,10 @@ const NameLogo = styled.li`
   font-size: 2rem;
   color: #465a69;
   cursor: pointer;
+
+  @media only screen and (max-width: 980px) {
+    font-size: 1.2rem;
+  }
 `;
 
 const Navigation = styled.div`

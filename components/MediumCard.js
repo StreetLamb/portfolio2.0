@@ -46,7 +46,7 @@ const Card = styled.a`
     transform: scale(1.2);
   }
 
-  @media only screen and (max-width: 700px) {
+  @media only screen and (max-width: 1020px) {
     width: 100%;
    }
 `;
@@ -55,6 +55,10 @@ const MidText = styled.span`
   font-size: 1.5rem;
   font-weight: 600;
   margin-top: 0.5rem;
+
+  @media only screen and (max-width: 480px) {
+    font-size: 1rem;
+  }
 `;
 
 const SmallText = styled(MidText)`
@@ -64,6 +68,7 @@ const SmallText = styled(MidText)`
 const HeaderBox = styled.div`
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 `;
 
 const MediumCard = ({ bgcolor, image, category, title, date, slug }) => {
