@@ -1,13 +1,25 @@
-import styled from "styled-components";
-import { useState } from "react";
+import styled, { css } from "styled-components";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 
 const StyledNavBar = styled.ul`
   list-style-type: none;
   margin: 0;
-  padding: 5rem 2rem 3rem 2rem;
+  padding: 2rem;
   display: flex;
   align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  transition: top 0.3s;
+  background: white;
+  z-index: 2;
+
+  ${(props) =>
+    props.toHide &&
+    css`
+      top: -10rem;
+    `}
 `;
 
 const NameLogo = styled.li`
@@ -77,9 +89,24 @@ const StyledNavButton = styled.li`
 
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false);
+  const [hide, setHide] = useState(false);
+
+  useEffect(() => {
+    let prevScrollpos = window.pageYOffset;
+    window.onscroll = function () {
+      let currentScrollPos = window.pageYOffset;
+      if (prevScrollpos > currentScrollPos || currentScrollPos < 20) {
+        setHide(false);
+      } else {
+        setHide(true);
+      }
+      prevScrollpos = currentScrollPos;
+    };
+  });
+
   return (
     <>
-      <StyledNavBar>
+      <StyledNavBar toHide={hide}>
         <NameLogo>
           <Link href="/">Jerron Lim</Link>
         </NameLogo>
