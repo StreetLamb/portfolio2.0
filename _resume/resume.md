@@ -6,7 +6,7 @@
 
 > - Traffic Data Quality and Planning & Data Science Team.
 
-> - Support development of island-wide project to improve LTA's traffic analysis, management and real-time prediction capabilities.
+> - Support development of an island-wide project to improve LTA's traffic analysis, management and real-time prediction capabilities.
 
 > - Conduct studies and build prototypes to validate ideas to enhance traffic data collection and visualisation.
 
@@ -42,7 +42,7 @@
 
 > Full-stack developer (2017 - 2018)
 
-> - Designed web applications using React and Express for clients. Web applications capabilities include: Data Visualization, market monitoring, inventory management.
+> - Designed web applications using React and Express for clients. Web applications capabilities include Data Visualization, market monitoring, inventory management.
 
 > - Developed Telegram bots in python and JavaScript for clients.
 

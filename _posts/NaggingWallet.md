@@ -1,6 +1,6 @@
 ---
 title: "Reduce impulsive purchases through an inconveniently designed extension"
-excerpt: "Online shoppings becomes increasingly addictive with many sites offering discounts and attractive deals. It's time to control our addiction."
+excerpt: "Online shopping is becoming increasingly addictive. Many sites are offering 'discounts' and attractive 'deals' to pull people into purchasing /unnecessary products. It's time to control our addiction."
 coverImage: "/images/nagging-wallet/naggingwallet.png"
 date: "17 April 2020"
 author:
@@ -11,7 +11,7 @@ featured: "False"
 
 _NaggingWallet is a solo project built on an idea that won us first place in Hack Mental Health hackathon @ UCSF in 2019. Read the medium article [here](https://medium.com/hackmentalhealth/compulsive-buying-disorder-winning-hackmentalhealth-2019-42db168d31c4)!_
 
-Online shopping allows us to purchase items with greater ease, but this also means our money gets spent with greater ease too! I decided to create NaggingWallet, a chrome extension that persuades you to make better online shopping decisions through an inconvenient design. This means manipulating the site such as making the purchase button less attractive to click, removing ads, creating prompts that act as safety nets to ensure that you only purchase what you need, and many others! It also helps keep track of your online spendings.
+Online shopping allows us to purchase items with greater ease, but this also means our money gets spent with greater ease too! I decided to create NaggingWallet, a chrome extension that persuades you to make better online shopping decisions through an inconvenient design. It does so by manipulating the site such as making the purchase button less attractive to click, removing ads, creating prompts that act as safety nets to ensure that you only purchase what you need, and many others! It also helps keep track of your online spendings.
 
 Here are some of the more prominent features:
 
