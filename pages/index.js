@@ -147,6 +147,10 @@ export default function Home({ allPosts }) {
         <title>Jerron Lim's Portfolio</title>
         <meta name="title" content="Jerron Lim's Portfolio" />
         <meta
+          name="google-site-verification"
+          content="yf9kPHUCxp51r2z0Eu_Q3D4QhdONiyrOGyKUIKRoqx4"
+        />
+        <meta
           name="description"
           content="This site contains a portfolio of Jerron Lim personal projects."
         />
