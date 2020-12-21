@@ -143,7 +143,12 @@ export default function Home({ allPosts }) {
     <div>
       <Head>
         <title>Jerron's Portfolio</title>
-        <meta property="og:title" content="Jerron portfolio" key="title" />
+        <meta property="og:image" content="/public/images/jerron.jpeg" />
+        <meta
+          property="og:description"
+          content="This site contains a portfolio of Jerron Lim personal projects."
+        />
+        <meta property="og:title" content="Jerron Lim's Portfolio" />
         <link rel="icon" href="/favicon.ico" />
         <script
           type="module"
