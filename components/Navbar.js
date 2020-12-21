@@ -22,10 +22,10 @@ const NameLogo = styled.li`
 
 const Navigation = styled.div`
   position: fixed;
-  top: 0;
+  top: -100vh;
   left: 0;
-  bottom: 0;
   right: 0;
+  height: 100vh;
   background: #344854;
   z-index: 100;
   display: flex;
@@ -33,12 +33,11 @@ const Navigation = styled.div`
   align-items: center;
   justify-content: center;
   visibility: hidden;
-  transform: translateY(-100vh);
   transition: transform 0.5s, visibility 0.5s;
 
   ${(props) =>
     props.isEnabled
-      ? `transform: translateY(0);
+      ? `transform: translateY(100vh);
         visibility: visible;
       `
       : null}

@@ -143,6 +143,7 @@ export default function Home({ allPosts }) {
     <div>
       <Head>
         <title>Jerron's Portfolio</title>
+        <meta property="og:title" content="Jerron portfolio" key="title" />
         <link rel="icon" href="/favicon.ico" />
         <script
           type="module"
