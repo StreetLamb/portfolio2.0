@@ -143,7 +143,10 @@ export default function Home({ allPosts }) {
     <div>
       <Head>
         <title>Jerron's Portfolio</title>
-        <meta property="og:image" content="/public/images/jerron.jpeg" />
+        <meta
+          property="og:image"
+          content="https://jerron.now.sh/images/jerron.jpeg"
+        />
         <meta
           property="og:description"
           content="This site contains a portfolio of Jerron Lim personal projects."
