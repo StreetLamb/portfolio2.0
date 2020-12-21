@@ -143,15 +143,43 @@ export default function Home({ allPosts }) {
     <div>
       <Head>
         <title>Jerron's Portfolio</title>
+
+        <title>Jerron Lim's Portfolio</title>
+        <meta name="title" content="Jerron Lim's Portfolio" />
         <meta
-          property="og:image"
+          name="description"
+          content="This site contains a portfolio of Jerron Lim personal projects."
+        />
+
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:url"
           content="https://jerron.now.sh/images/jerron.jpeg"
         />
+        <meta property="og:title" content="Jerron Lim's Portfolio" />
         <meta
           property="og:description"
           content="This site contains a portfolio of Jerron Lim personal projects."
         />
-        <meta property="og:title" content="Jerron Lim's Portfolio" />
+        <meta
+          property="og:image"
+          content="https://jerron.now.sh/images/jerron.jpeg"
+        />
+
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta
+          property="twitter:url"
+          content="https://jerron.now.sh/images/jerron.jpeg"
+        />
+        <meta property="twitter:title" content="Jerron Lim's Portfolio" />
+        <meta
+          property="twitter:description"
+          content="This site contains a portfolio of Jerron Lim personal projects."
+        />
+        <meta
+          property="twitter:image"
+          content="https://jerron.now.sh/images/jerron.jpeg"
+        />
         <link rel="icon" href="/favicon.ico" />
         <script
           type="module"
