@@ -16,13 +16,19 @@ const Card = styled.a`
     props.animate == "true" &&
     css`
     transition: background 0.2s, color: 0.2s, transform 0.2s;
-    &:hover ${TextContainer} {
-      background: ${(props) => props.bgcolor};
-      color: white;
+
+    @media (hover: hover) {
+      
+      &:hover ${TextContainer} {
+        background: ${(props) => props.bgcolor};
+        color: white;
+      }
+      
+      &:hover ${StyledImage} {
+        transform: scale(1.05);
+      }
     }
-    &:hover ${StyledImage} {
-      transform: scale(1.05);
-    }
+    
   `}
 
   @media only screen and (max-width: 980px) {

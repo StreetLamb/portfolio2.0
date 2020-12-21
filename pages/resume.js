@@ -28,7 +28,6 @@ export async function getStaticProps() {
   const content = getResume();
 
   const resume = await markdownToHtml(content || "");
-  console.log(resume);
 
   return {
     props: {

@@ -7,6 +7,7 @@ const StyledNavBar = styled.ul`
   margin: 0;
   padding: 5rem 2rem 3rem 2rem;
   display: flex;
+  align-items: center;
 `;
 
 const NameLogo = styled.li`
@@ -14,6 +15,7 @@ const NameLogo = styled.li`
   font-size: 2rem;
   color: #465a69;
   cursor: pointer;
+  align-self: center;
 
   @media only screen and (max-width: 980px) {
     font-size: 1.2rem;

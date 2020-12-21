@@ -37,13 +37,15 @@ const Card = styled.a`
   transition: background 0.2s, color: 0.2s, transform 0.2s;
   cursor: pointer;
 
-  &:hover ${TextContainer} {
-    background: ${(props) => props.bgcolor};
-    color: white;
-  }
-  
-  &:hover ${StyledImage} {
-    transform: scale(1.05);
+  @media (hover: hover) {
+    &:hover ${TextContainer} {
+      background: ${(props) => props.bgcolor};
+      color: white;
+    }
+    
+    &:hover ${StyledImage} {
+      transform: scale(1.05);
+    }
   }
 
   @media only screen and (max-width: 1020px) {

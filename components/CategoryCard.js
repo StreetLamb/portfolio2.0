@@ -14,14 +14,18 @@ const CatCard = styled.a`
   transition: transform 0.2s, background 0.2s;
   flex: 1;
 
-  &:hover {
-    transform: scale(1.02);
-    background: #808c9e;
+  @media (hover: hover) {
+    &:hover {
+      transform: scale(1.02);
+      background: #808c9e;
+    }
   }
 
   @media only screen and (max-width: 980px) {
     max-width: 100%;
     margin: 1rem;
+    &:hover {
+    }
   }
 `;
 

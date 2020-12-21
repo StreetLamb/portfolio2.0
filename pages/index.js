@@ -57,7 +57,8 @@ const ImageBox = styled.div`
   transform: translateY(3rem);
 
   @media only screen and (max-width: 980px) {
-    flex: 2;
+    flex: 1;
+    transform: translateY(0);
   }
 `;
 
@@ -65,12 +66,12 @@ const ContentBox = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  min-height: 40rem;
-  padding: 8rem 1rem 4rem 2rem;
+
+  padding: 4rem 2rem 1rem 2rem;
   background: ${(props) => props.bgcolor};
 
   @media only screen and (max-width: 980px) {
-    padding: 8rem 1rem;
+    padding: 4rem 1rem;
   }
 `;
 

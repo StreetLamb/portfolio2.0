@@ -1,6 +1,6 @@
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import MediumCard from "../../components/MediumCard";
 import { getAllPosts } from "../../lib/api";
 import { useState, useEffect } from "react";
@@ -123,6 +123,17 @@ const CardContainer = styled.div`
   justify-content: center;
 `;
 
+const StyledIcon = styled.div`
+  transform: rotate(0deg);
+  transition: transform 0.2s;
+
+  ${(props) =>
+    props.rotate &&
+    css`
+      transform: rotate(180deg);
+    `}
+`;
+
 const categories = ["Software dev", "Engineering", "ML", "All"];
 
 const AllProjects = ({ allPosts }) => {
@@ -151,7 +162,9 @@ const AllProjects = ({ allPosts }) => {
           ))}
           <CatNav onClick={() => setCatNav(!catNav)}>
             <CatSmallText>{cat}</CatSmallText>
-            <ion-icon size="large" name="chevron-down-outline"></ion-icon>
+            <StyledIcon rotate={catNav ? 1 : 0}>
+              <ion-icon size="large" name="chevron-down-outline"></ion-icon>
+            </StyledIcon>
           </CatNav>
         </CategoryList>
         {catNav ? (
