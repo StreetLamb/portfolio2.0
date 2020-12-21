@@ -2,7 +2,7 @@
 title: "Reduce impulsive purchases through an inconveniently designed extension"
 excerpt: "Online shoppings becomes increasingly addictive with many sites offering discounts and attractive deals. It's time to control our addiction."
 coverImage: "/images/nagging-wallet/naggingwallet.png"
-date: "April 2020"
+date: "17 April 2020"
 author:
   name: Jerron Lim
 category: "Software dev"

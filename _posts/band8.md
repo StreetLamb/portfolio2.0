@@ -2,7 +2,7 @@
 title: "Curbing meltdowns in children with autism"
 excerpt: "Band8 aims to help children with Autism Spectrum Disorder through a wearable device."
 coverImage: "/images/band8/band8.jpeg"
-date: "Jan 2020"
+date: "10 Jan 2020"
 author:
   name: Jerron Lim
 category: "Engineering"

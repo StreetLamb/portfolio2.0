@@ -28,6 +28,7 @@ const Card = styled.a`
   @media only screen and (max-width: 980px) {
     flex-direction: column;
     width: 100%;
+    height: 25rem;
   }
 
   @media only screen and (max-width: 480px) {
@@ -71,6 +72,10 @@ const StyledText = styled.p`
   font-size: 2rem;
   font-weight: 600;
   margin-bottom: auto;
+
+  @media only screen and (max-width: 980px) {
+    font-size: 1.5rem;
+  }
 
   @media only screen and (max-width: 480px) {
     font-size: 1rem;

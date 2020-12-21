@@ -2,7 +2,7 @@
 title: "Protecting wheelchair patients and their caregivers from rain and shine."
 excerpt: "An innovative wheelchair add-on to shelter patients and their caregivers"
 coverImage: "/images/wheely/wheely.jpg"
-date: "Dec 2019"
+date: "10 Dec 2019"
 author:
   name: Jerron Lim
 category: "Engineering"

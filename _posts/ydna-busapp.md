@@ -2,7 +2,7 @@
 title: "Receive bus information quickly via a web app"
 excerpt: "YDNABusapp provides you with all the information you need for your next bus ride."
 coverImage: "/images/ydna-bus-app/bustimings.png"
-date: "Dec 2020"
+date: "11 Dec 2020"
 author:
   name: Jerron Lim
 category: "Software dev"

@@ -2,7 +2,7 @@
 title: "Connect with people through movies and tv shows with NetflixPartyAnimals"
 excerpt: "Covid19 has forced us into our homes. How do we continue to create new relationships?"
 coverImage: "/images/netflix-party-animals/netflixpartyanimals.jpeg"
-date: "April 2020"
+date: "24 April 2020"
 author:
   name: Jerron Lim
 category: "Software dev"

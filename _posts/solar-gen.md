@@ -2,7 +2,7 @@
 title: "Predicting power generation of a solar power facility over long time sequences"
 excerpt: "Can we predict the amount of power being generated over the next few days?"
 coverImage: "/images/ML/solarpanel.jpg"
-date: "Oct 2020"
+date: "23 Oct 2020"
 author:
   name: Jerron Lim
 category: "ML"

@@ -2,7 +2,7 @@
 title: "Determining the quality of wine"
 excerpt: "Can we classify the quality of wine based on its physiohemical properties?"
 coverImage: "/images/ML/wine.jpg"
-date: "Sep 2020"
+date: "15 Sep 2020"
 author:
   name: Jerron Lim
 category: "ML"

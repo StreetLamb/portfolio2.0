@@ -2,7 +2,7 @@
 title: "One bot to rule all transport apps"
 excerpt: "Mr Travel gets you to your location through the Telegram messaging app"
 coverImage: "/images/mr-travel/mrtravel.png"
-date: "Jun 2018"
+date: "04 July 2018"
 author:
   name: Jerron Lim
 category: "software dev"

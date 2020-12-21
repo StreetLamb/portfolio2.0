@@ -2,7 +2,7 @@
 title: "Predicting what type of crimes will occur in San Francisco"
 excerpt: "Given a day and time, can we determine what types of crime will happen in an area?"
 coverImage: "/images/ML/sanfrancisco.jpg"
-date: "Oct 2020"
+date: "20 Oct 2020"
 author:
   name: Jerron Lim
 category: "ML"

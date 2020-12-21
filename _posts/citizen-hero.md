@@ -2,7 +2,7 @@
 title: "Building stronger neighbourhood communities with CitizenHero"
 excerpt: "As the pace of life in Singapore continues to increases, how can we hold onto our kampung spirit?"
 coverImage: "/images/citizen-hero/citizenhero.png"
-date: "March 2020"
+date: "10 March 2020"
 author:
   name: Jerron Lim
 category: "Software dev"

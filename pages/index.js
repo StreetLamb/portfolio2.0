@@ -118,8 +118,9 @@ const StyledDotGroup = styled(DotGroup)`
 const StyledDot = styled(Dot)`
   height: 0.8rem;
   width: 0.8rem;
+  padding: 0;
   border-radius: 100%;
-  margin-right: 0.5rem;
+  margin: 0.5rem;
   background: #6d6d6da3;
   opacity: 0.7;
   border: none;
@@ -175,64 +176,41 @@ export default function Home({ allPosts }) {
         </HeroBox>
         <ContentBox bgcolor="#f1f4f7">
           <ContentTitle>Noteworthy projects</ContentTitle>
-          <div>
-            <CarouselProvider
-              naturalSlideWidth={960}
-              isIntrinsicHeight
-              totalSlides={featuredPosts.length}
-            >
-              <Slider>
-                {featuredPosts
-                  ? featuredPosts.map((post, index) => (
-                      <Slide
-                        key={index}
-                        index={index}
-                        style={{ display: "flex", justifyContent: "center" }}
-                        innerTag={InnerSlide}
-                      >
-                        <BigCard
-                          className="legend"
-                          image={post.coverImage || "/images/project.webp"}
-                          title={post.title}
-                          date={post.date}
-                          slug={post.slug}
-                          bgcolor={["#2a9d8f", "#e76f51", "#f4a261"][index % 3]}
-                          animate="false"
-                        />
-                      </Slide>
-                    ))
-                  : null}
-              </Slider>
-              <StyledDotGroup
-                renderDots={() => (
-                  <div>
-                    {featuredPosts.map((post, index) => (
-                      <StyledDot key={index} slide={index} />
-                    ))}
-                  </div>
-                )}
-              />
-            </CarouselProvider>
-          </div>
-
-          {/* <StyledCarousel>
-            {featuredPosts
-              ? featuredPosts.map((post, index) => (
-                  <div>
-                    <BigCard
-                      className="legend"
+          <CarouselProvider
+            naturalSlideWidth={960}
+            isIntrinsicHeight
+            totalSlides={featuredPosts.length}
+          >
+            <Slider>
+              {featuredPosts
+                ? featuredPosts.map((post, index) => (
+                    <Slide
                       key={index}
-                      image={post.coverImage || "/images/project.webp"}
-                      title={post.title}
-                      date={post.date}
-                      slug={post.slug}
-                      bgcolor="#1d6e96"
-                      animate="false"
-                    />
-                  </div>
+                      index={index}
+                      style={{ display: "flex", justifyContent: "center" }}
+                      innerTag={InnerSlide}
+                    >
+                      <BigCard
+                        className="legend"
+                        image={post.coverImage || "/images/project.webp"}
+                        title={post.title}
+                        date={post.date}
+                        slug={post.slug}
+                        bgcolor={["#2a9d8f", "#e76f51", "#f4a261"][index % 3]}
+                        animate="false"
+                      />
+                    </Slide>
+                  ))
+                : null}
+            </Slider>
+            <StyledDotGroup
+              renderDots={() =>
+                featuredPosts.map((post, index) => (
+                  <StyledDot key={index} slide={index} />
                 ))
-              : null}
-          </StyledCarousel> */}
+              }
+            />
+          </CarouselProvider>
         </ContentBox>
         <ContentBox>
           <ContentTitle>Projects by categories</ContentTitle>
