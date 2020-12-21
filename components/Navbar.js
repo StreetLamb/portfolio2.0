@@ -32,17 +32,16 @@ const Navigation = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  visibility: hidden;
+  transform: translateY(-100vh);
   transition: transform 0.5s, visibility 0.5s;
 
   ${(props) =>
-    !props.isEnabled
-      ? `
-    transform: translateY(-100vh);
-    visibility: hidden;
-  `
-      : `transform: translateY(0);
+    props.isEnabled
+      ? `transform: translateY(0);
         visibility: visible;
-      `}
+      `
+      : null}
 `;
 
 const FullNavButton = styled.span`
