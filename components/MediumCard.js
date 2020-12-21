@@ -43,7 +43,7 @@ const Card = styled.a`
   }
   
   &:hover ${StyledImage} {
-    transform: scale(1.2);
+    transform: scale(1.05);
   }
 
   @media only screen and (max-width: 1020px) {

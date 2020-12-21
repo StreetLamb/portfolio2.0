@@ -199,12 +199,12 @@ export default function Home({ allPosts }) {
         <HeroBox>
           <IntroBox>
             <IntroText>
-              Hi, my name is Jerron. I am currently an engineer in LTA's
-              Intelligent Transport Systems Development division.
+              Hi, Jerron here. I am currently an engineer/ data engineer in
+              LTA's Intelligent Transport Systems Development division.
               <br />
               <br />
               This site keeps track of my personal projects and my thoughts
-              after working on them.
+              working on them.
             </IntroText>
           </IntroBox>
           <ImageBox>

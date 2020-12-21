@@ -21,7 +21,7 @@ const Card = styled.a`
       color: white;
     }
     &:hover ${StyledImage} {
-      transform: scale(1.2);
+      transform: scale(1.05);
     }
   `}
 
