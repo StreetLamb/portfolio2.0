@@ -6,10 +6,10 @@ date: "10 Jan 2020"
 author:
   name: Jerron Lim
 category: "Engineering"
-featured: "False"
+featured: "True"
 ---
 
-_Read Randall's experience working on the project [here](https://www.linkedin.com/pulse/from-ideation-development-journey-building-product-randall-wong)!_
+_Read Randall's experience working on the project [here](https://www.linkedin.com/pulse/from-ideation-development-journey-building-product-randall-wong) and check out our [promo vid](https://www.instagram.com/p/B69k4JeJhOw/?igshid=1l5hf15071qt7)!_
 
 Band8 is a wearable device that tracks the anxiety level of children with autism and alert "lifesavers" whenever they experience heightened anxiety.
 

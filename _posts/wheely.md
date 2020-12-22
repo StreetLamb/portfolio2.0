@@ -9,6 +9,10 @@ category: "Engineering"
 featured: "True"
 ---
 
+_Update (22 Dec 2020): The wheely team clinched 1st place in the 14th International i-CREATe's Global Student Innovation Challenge! We were featured on [NUS Engineering page](https://www.eng.nus.edu.sg/me/news/team-wheely-wins-gold-award-at-i-create-2020/)._
+
+&nbsp;
+
 We partnered with the Ester team in Singapore General Hospital (SGH) to develop a wheelchair that could provide wheelchair users with more freedom.
 
 They explained to us that a significant number of elderlies do not turn up for their appointments when it is raining. This is a significant problem as Singapore has an average of 167 days of high rainfall, and 28% of our population will be aged 65 and above by 2030.
