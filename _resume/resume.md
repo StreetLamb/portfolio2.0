@@ -64,9 +64,12 @@
 
 # Skills
 
+> Front-end and back-end Web development, iOS app development, Machine Learning, CAD
+
 > Python,
 > JavaScript,
 > Reactjs,
+> SwiftUI,
 > Express,
 > HTML,
 > CSS,
