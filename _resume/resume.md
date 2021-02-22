@@ -69,6 +69,8 @@
 > Python,
 > JavaScript,
 > Reactjs,
+> Nextjs,
+> Nodejs,
 > SwiftUI,
 > Express,
 > HTML,
@@ -77,4 +79,3 @@
 > Tensorflow,
 > Tableau,
 > PostgreSQL,
-> Nodejs
