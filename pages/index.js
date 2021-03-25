@@ -200,12 +200,11 @@ export default function Home({ allPosts }) {
         <HeroBox>
           <IntroBox>
             <IntroText>
-              Hi, Jerron here. I am currently an engineer/ data engineer in
+              Hi, Jerron here. I am currently an engineer in
               LTA's Intelligent Transport Systems Development division.
               <br />
               <br />
-              This site keeps track of my personal projects and my thoughts
-              working on them.
+              This is a place for my projects and my experience working on them.
             </IntroText>
           </IntroBox>
           <ImageBox>
