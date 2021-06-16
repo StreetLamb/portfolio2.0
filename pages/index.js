@@ -15,6 +15,7 @@ import {
   Dot,
 } from "pure-react-carousel";
 import "pure-react-carousel/dist/react-carousel.es.css";
+import AuthorPhoto from "../public/images/jerron.jpeg";
 
 const HeroBox = styled.div`
   height: 38rem;
@@ -54,12 +55,8 @@ const ImageBox = styled.div`
   position: relative;
   display: flex;
   flex: 1;
-  transform: translateY(3rem);
-
-  @media only screen and (max-width: 980px) {
-    flex: 1;
-    transform: translateY(0);
-  }
+  top: 3rem;
+  left: 0;
 `;
 
 const ContentBox = styled.div`
@@ -210,7 +207,7 @@ export default function Home({ allPosts }) {
           </IntroBox>
           <ImageBox>
             <StyledImage
-              src="/images/jerron.jpeg"
+              src={AuthorPhoto}
               alt="profile picture"
               layout="fill"
             />
