@@ -197,11 +197,12 @@ export default function Home({ allPosts }) {
         <HeroBox>
           <IntroBox>
             <IntroText>
-              Hi, Jerron here. I am currently an engineer in
-              LTA's Intelligent Transport Systems Development division.
+              Hi, Jerron here. I am currently an engineer in LTA's Intelligent
+              Transport Systems Development division.
               <br />
               <br />
-              This is a place for my projects and my experience working on them.
+              This is a place for me to share my projects and my experience
+              working on them.
             </IntroText>
           </IntroBox>
           <ImageBox>

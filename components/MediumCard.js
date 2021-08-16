@@ -78,7 +78,12 @@ const MediumCard = ({ bgcolor, image, category, title, date, slug }) => {
     <Link href={`/projects/${slug}`} passHref>
       <Card bgcolor={bgcolor}>
         <ImageBox>
-          <StyledImage src={image} layout="fill" alt="img of project" />
+          <StyledImage
+            src={image}
+            width="900"
+            height="200"
+            alt="img of project"
+          />
         </ImageBox>
         <TextContainer bgcolor={bgcolor}>
           <HeaderBox>

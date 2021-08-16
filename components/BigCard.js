@@ -96,8 +96,10 @@ const BigCard = ({ animate, bgcolor, image, title, slug, date }) => {
           <StyledImage
             animate={animate}
             src={image}
-            layout="fill"
+            // layout="fill"
             alt="img of noteworthy project"
+            width="900"
+            height="200"
           />
         </ImageBox>
 
